@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Define MongoDB connection URL and Database name
-const url = 'mongodb+srv://rishi:rishi@cluster0.qnk3q4f.mongodb.net/moviesDB?retryWrites=true&w=majority';
+const url = process.env.MONGODB_URI;
 const dbName = 'moviesDB';
 
 // Define endpoint to add a single movie
